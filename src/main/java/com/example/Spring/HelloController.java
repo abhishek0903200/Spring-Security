@@ -54,7 +54,7 @@ public class HelloController {
         }
         SecurityContextHolder.getContext().setAuthentication(authentication);
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        return jwtUtils.generateTokenFromUsername(userDetails.getUsername());
+        return jwtUtils.generateTokenFromUsername(userDetails);
     }
 
 }
